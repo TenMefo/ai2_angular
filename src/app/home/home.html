@@ -1,0 +1,20 @@
+<section>
+  <form (submit)="filterResults(filter.value, $event)">
+    <input type="text" aria-label="Filter by city" placeholder="Filter by city" #filter />
+    <button class="primary" type="submit">Search</button>
+  </form>
+</section>
+
+@if (loading()) {
+  <p class="status" role="status">Loading housing locations…</p>
+} @else if (loadFailed()) {
+  <p class="status" role="alert">Housing locations could not be loaded.</p>
+} @else {
+  <section class="results" aria-label="Housing locations">
+    @for (housingLocation of filteredLocationList(); track housingLocation.id) {
+      <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
+    } @empty {
+      <p class="status" role="status">No housing locations match this city.</p>
+    }
+  </section>
+}

@@ -1,0 +1,24 @@
+@let state = details();
+@if (state.status === 'ready') {
+  <article>
+    <img class="listing-photo" [src]="state.location.photo" [alt]="'Exterior photo of ' + state.location.name" />
+    <section class="listing-description">
+      <h1 class="listing-heading">{{ state.location.name }}</h1>
+      <p class="listing-location">{{ state.location.city }}, {{ state.location.state }}</p>
+    </section>
+    <section class="listing-features">
+      <h2>About this housing location</h2>
+      <ul>
+        <li>Units available: {{ state.location.availableUnits }}</li>
+        <li>Does this location have wifi: {{ state.location.wifi }}</li>
+        <li>Does this location have laundry: {{ state.location.laundry }}</li>
+      </ul>
+    </section>
+  </article>
+} @else if (state.status === 'missing') {
+  <p role="status">This housing location could not be found.</p>
+} @else if (state.status === 'error') {
+  <p role="alert">Housing location details could not be loaded.</p>
+} @else {
+  <p role="status">Loading housing location…</p>
+}

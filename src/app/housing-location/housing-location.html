@@ -1,0 +1,7 @@
+@let location = housingLocation();
+<section class="listing">
+  <img class="listing-photo" [src]="location.photo" [alt]="'Exterior photo of ' + location.name" />
+  <h2 class="listing-heading">{{ location.name }}</h2>
+  <p class="listing-location">{{ location.city }}, {{ location.state }}</p>
+  <a [routerLink]="['/details', location.id]">Learn More</a>
+</section>

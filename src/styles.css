@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #605dc8;
+  --secondary-color: #8b89e6;
+  --accent-color: #e8e7fa;
+  --shadow-color: #e8e8e8;
+}
+
+body {
+  min-height: 100vh;
+  color: #212039;
+  background: #fff url('/assets/album-watermark.svg') repeat;
+  font-family: 'Be Vietnam Pro', Arial, sans-serif;
+}
+
+button.primary {
+  padding: 10px 18px;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  font: inherit;
+}

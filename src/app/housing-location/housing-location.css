@@ -1,0 +1,49 @@
+.listing {
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 24px;
+  border-radius: 30px;
+  background: var(--accent-color);
+}
+
+.listing-photo {
+  display: block;
+  width: 100%;
+  height: 235px;
+  object-fit: cover;
+}
+
+.listing-heading {
+  padding: 12px 20px 0;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+}
+
+.listing-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 20px 15px;
+}
+
+.listing-location::before {
+  width: 14px;
+  height: 16px;
+  background: url('/assets/location-pin.svg') center / contain no-repeat;
+  content: '';
+}
+
+.listing a {
+  margin-left: 20px;
+  color: #4e49ae;
+  text-decoration: none;
+}
+
+.listing a:hover {
+  text-decoration: underline;
+}
+
+.listing a::after {
+  margin-left: 6px;
+  content: '\203A';
+}

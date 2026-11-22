@@ -1,0 +1,21 @@
+.brand-name {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 10px 24px;
+  background: white;
+  box-shadow: 0 3px 8px var(--shadow-color);
+}
+
+.brand-logo {
+  display: block;
+  max-width: 120px;
+  max-height: 36px;
+}
+
+.content {
+  display: block;
+  max-width: 1500px;
+  margin-inline: auto;
+  padding: 24px;
+}
