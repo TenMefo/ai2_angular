@@ -1,0 +1,12 @@
+<section class="card">
+  <h2>Zakres 1-{{ max() }}</h2>
+  <button type="button" (click)="draw()">Losuj</button>
+  <div class="result" aria-live="polite">
+    @if (result() !== null) {
+      <p class="number">{{ result() }}</p>
+      <p [class.lower]="isLowerHalf()" [class.upper]="!isLowerHalf()">
+        {{ isLowerHalf() ? 'dolna połowa wartości' : 'górna połowa wartości' }}
+      </p>
+    }
+  </div>
+</section>

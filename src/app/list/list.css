@@ -1,0 +1,44 @@
+.card {
+  padding: 1rem 1.25rem;
+  border: 1px solid #d0d9e6;
+  border-radius: 0.75rem;
+  background: #f8fafc;
+}
+
+h2 { margin: 0 0 0.65rem; font-size: 1.125rem; }
+p { margin: 0.75rem 0 0; color: #475467; }
+
+.controls, li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #94a3b8;
+  border-radius: 0.35rem;
+}
+
+button[type="submit"] {
+  padding: 0.3rem 0.75rem;
+  border: 1px solid #94a3b8;
+  border-radius: 0.35rem;
+  background: white;
+  color: #17243b;
+}
+
+button:disabled { opacity: 0.55; cursor: default; }
+ul { margin: 0.75rem 0 0; padding: 0; }
+li { justify-content: space-between; padding: 0.3rem 0; }
+li span { overflow-wrap: anywhere; }
+
+.remove {
+  flex-shrink: 0;
+  border: 0;
+  background: transparent;
+  color: #b91c1c;
+  text-decoration: underline;
+}

@@ -1,0 +1,33 @@
+.card {
+  min-height: 12rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #d0d9e6;
+  border-radius: 0.75rem;
+  background: #f8fafc;
+}
+
+h2, p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.125rem;
+}
+
+button {
+  margin-top: 0.75rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid #1d4ed8;
+  border-radius: 0.35rem;
+  background: #1d4ed8;
+  color: white;
+}
+
+.number {
+  margin-top: 0.4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.lower { color: #166534; }
+.upper { color: #b91c1c; }

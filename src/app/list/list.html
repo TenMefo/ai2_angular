@@ -1,0 +1,23 @@
+<section class="card">
+  <h2>Lista elementów</h2>
+  <form (ngSubmit)="add()">
+    <label for="new-item">Nowy element</label>
+    <div class="controls">
+      <input id="new-item" name="item" [(ngModel)]="text" required>
+      <button type="submit" [disabled]="!text.trim()">Dodaj</button>
+    </div>
+  </form>
+  @if (items().length) {
+    <ul>
+      @for (item of items(); track item.id) {
+        <li>
+          <span>{{ item.text }}</span>
+          <button type="button" class="remove" (click)="remove(item.id)"
+            [attr.aria-label]="'Usuń ' + item.text">usuń</button>
+        </li>
+      }
+    </ul>
+  } @else {
+    <p>Lista jest pusta.</p>
+  }
+</section>
